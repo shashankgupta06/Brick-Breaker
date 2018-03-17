@@ -8,6 +8,7 @@ public class GM : MonoBehaviour {
 	public Text score_count;
 	public GameObject life;
 	public Text level_count;
+	public GameObject level2LoadingScreen;
 
 	public static int nextLife = 100;
 	public static int score;
@@ -29,8 +30,8 @@ public class GM : MonoBehaviour {
 		if (block_count == 0) {
 
 			seconds += Time.deltaTime;
-
-			if (seconds >= 3) {
+			level2LoadingScreen.SetActive (true);
+			if (seconds >= 7) {
 				level++;
 				MovePaddle.launched_Ball = false;
 				SceneManager.LoadScene (level);
