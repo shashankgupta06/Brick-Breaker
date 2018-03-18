@@ -46,7 +46,24 @@ public class Block_Controller : MonoBehaviour {
 		if(block_health <=0){
 			GM.block_count--;
 			Destroy (gameObject);
-			GM.score += 5;
+
+			switch (gameObject.tag) {
+
+			case "RedBrick":
+				GM.score += 5;
+				break;
+
+			case "YellowBrick":
+				GM.score += 11;
+				break;
+
+			default:
+				GM.score += 5;
+				break;
+
+
+
+			}
 		}
 	}
 }
