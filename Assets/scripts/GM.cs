@@ -30,7 +30,10 @@ public class GM : MonoBehaviour {
 		if (block_count == 0) {
 
 			seconds += Time.deltaTime;
-			level2LoadingScreen.SetActive (true);
+
+			if (level == 1) {
+				level2LoadingScreen.SetActive (true);
+			}
 			if (seconds >= 7) {
 				level++;
 				MovePaddle.launched_Ball = false;

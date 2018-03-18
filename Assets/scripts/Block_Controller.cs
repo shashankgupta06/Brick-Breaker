@@ -10,6 +10,21 @@ public class Block_Controller : MonoBehaviour {
 	void Start () {
 		GM.block_count++;
 
+		switch (gameObject.tag) {
+
+		case "RedBrick":
+			block_health = 1;
+			break;
+
+		case "YellowBrick":
+			block_health = 2;
+			break;
+
+
+
+
+		}
+
 	}
 	
 	// Update is called once per frame
