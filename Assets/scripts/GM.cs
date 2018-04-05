@@ -9,7 +9,9 @@ public class GM : MonoBehaviour {
 	public GameObject life;
 	public Text level_count;
 	public GameObject level2LoadingScreen;
-
+	public GameObject level3LoadingSCreen;
+	public GameObject paddle;
+	public GameObject ball;
 	public static int nextLife = 100;
 	public static int score;
 	public static int lives = 3;
@@ -24,17 +26,24 @@ public class GM : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () {                          
 		
 
-		if (block_count == 0) {
+		if (block_count == 0) {                                     //level switch
 
 			seconds += Time.deltaTime;
 
 			if (level == 1) {
 				level2LoadingScreen.SetActive (true);
 			}
-			if (seconds >= 7) {
+
+			if (level == 2) {
+
+				level3LoadingSCreen.SetActive (true);
+				paddle.SetActive (false);
+				ball.SetActive (false);
+			}
+			if (seconds >= 4) {
 				level++;
 				MovePaddle.launched_Ball = false;
 				SceneManager.LoadScene (level);

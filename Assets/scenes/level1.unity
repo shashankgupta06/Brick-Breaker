@@ -2245,7 +2245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1104303916
 Light:
   m_ObjectHideFlags: 0
@@ -4222,6 +4222,9 @@ MonoBehaviour:
   life: {fileID: 1897937306614472, guid: 067e7ca2cd69b964fac8bd226dea93eb, type: 2}
   level_count: {fileID: 244155478}
   level2LoadingScreen: {fileID: 1969871493}
+  level3LoadingSCreen: {fileID: 0}
+  paddle: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!224 &2067505084 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224362740078794238, guid: 067e7ca2cd69b964fac8bd226dea93eb,

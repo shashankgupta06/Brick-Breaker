@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Block_Controller : MonoBehaviour {
-
+	public GameObject life;
 	private int block_health = 1;	
 
 	// Use this for initialization
@@ -45,6 +45,15 @@ public class Block_Controller : MonoBehaviour {
 
 		if(block_health <=0){
 			GM.block_count--;
+
+			if (transform.childCount > 0) {
+			GameObject newLife = Instantiate (life);
+			newLife.transform.parent = (GameObject.Find ("Bricks")).transform;
+			newLife.name = "life";
+			newLife.transform.position = GameObject.Find ("RedBrick (15)").transform.position;
+				newLife.AddComponent<Rigidbody2D> ();
+			}
+
 			Destroy (gameObject);
 
 			switch (gameObject.tag) {
